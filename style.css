@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+.main{
+    background: url(Frame%204.png) no-repeat center center ;
+     background-size: cover;
+    width: 100%;
+    height: 100vh;
+    z-index: 20;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    height: 10vh;
+    margin: auto;
+    align-items: center;
+    position: fixed;
+    z-index: 10;
+}
+.logo {
+    height: 7vh;
+}
+.logo svg{
+    height: 100%;
+    
+}
+.gray{
+      filter: invert(42%) sepia(2%) saturate(19%) hue-rotate(318deg) brightness(93%) contrast(83%);
+}
+
+.nav-links ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    
+}
+.nav-links ul li{
+    margin: 18px;
+}
+.nav-links ul li a{
+    color: white;
+    font-size: 22px;
+    text-decoration: none;
+    font-weight:500;
+}
+main {
+    
+    position: relative;
+    height: 100vh;
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+.buttons{
+   position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    
+}
+
+.buttons .btn1 {
+    color: white;
+    background: none;
+    border: 3px solid black; 
+}
+.buttons .btn2{
+    color: black;
+    backface-visibility: white;
+    border: 3px solid white;
+    background: white;
+}
+.buttons .btn2:hover{
+     color: white;
+    background: none;
+    border: 3px solid black; 
+    
+}
+.buttons .btn1:hover { color: black;
+    backface-visibility: white;
+    border: 3px solid white;
+    background: white;}
+.buttons .btn1,
+.buttons .btn2{
+    padding: 0.5rem ;
+    width: 15rem;
+    font-size: 2rem;
+    border-radius: 8px;
+    margin: 20px;
+    transition: background 0.7s ease;
+    animation: zoom 1.5s ease-in-out 0s 1;
+}
+.title-1,
+.title-2 
+{
+    position: absolute;
+    color: white;
+    font-style: normal;
+font-weight: 500;
+font-size: 5rem;
+line-height: 112px;
+}
+.title-1{
+    top: 15%;
+    
+    animation: swipe1 1.5s ease-out 0s 1;
+}
+@keyframes swipe1{
+     0%   {left:-100%; opacity: 0.4;}
+    75%{ left:4%; }
+  100% {left: 0%; opacity: 1;}
+}
+.title-2{
+    top: 60%;
+    right: 0;
+    animation: swipe2 1.5s ease-out 0s 1;
+}
+.version{
+    color: black;
+}
+@keyframes swipe2{
+     0%   {right:-100%; opacity: 0;}
+    75%{ right:4%;}
+  100% {right: 0%; opacity: 1;}
+}
+@keyframes zoom {
+    0% {
+        transform: scale(0);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.app-section {
+    width: 100%;
+    height: 100vh;
+    background: url(Frame%205.png) no-repeat center center fixed;
+     background-size: cover;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    
+}
+.app-layout {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 95%;
+    height: 100%;
+    margin: auto;
+}
+.app-text{
+    width: 50%;
+    transform: translateX(-10%);
+    opacity: 0;
+    transition: 1.3s all ease-in-out;
+}
+.text-appear{
+    opacity: 1;
+    transform: translateX(0);
+}
+.app-text h2{
+    color: white;
+    font-size: 3.4rem;
+    
+}
+.app-text p{
+    font-weight: 700;
+    color: black;
+    font-size: 1.4rem;
+}
+.app-logo{
+    width: 50%;
+    text-align: right;
+    transform: translateX(14%);
+    opacity: 0;
+    transition: 1.3s all ease-in-out;
+}
+.img-appear{
+    opacity: 1;
+    transform: translateX(0);
+}
+.app-logo img{
+    width: 550px;
+}
